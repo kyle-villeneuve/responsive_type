@@ -1,3 +1,8 @@
+// FONT STACK
+$font-stack: 'Raleway', Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+
+
+
 // FONT WEIGHTS
 $regular: 400;
 $bold: 700;
@@ -16,8 +21,14 @@ $heading-base-size: 1.25em;
 $heading-scale-ratio: 1.333;
 
 
+
+// LINE HEIGHTS
 $heading-line-height: 1.5;
 $body-line-height: 1.666;
+
+
+
+
 
 
 
@@ -38,7 +49,7 @@ $body-line-height: 1.666;
 body,input,textarea,option,select{
   color: rgb(40,40,40);
   font-weight: $regular;
-  font-family: 'Raleway', Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: $font-stack;
   line-height: $body-line-height;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

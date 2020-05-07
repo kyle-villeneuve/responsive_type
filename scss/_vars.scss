@@ -1,0 +1,41 @@
+/**
+ * FONT
+**/
+
+$font: "Roboto";
+$font-stack: $font, Candara, Calibri, Segoe, "Segoe UI", Arial, sans-serif;
+
+$normal: 400;
+$bold: 600;
+$extra-bold: 700;
+
+$base-color: #222;
+
+/**
+ * FONT SIZING
+**/
+
+$base-text-xs: 12px; // required
+$base-text-sm: 13px;
+$base-text-md: 14px;
+$base-text-lg: 15px;
+$base-text-xl: 16px;
+
+$body-line-height: 1.55;
+
+/**
+ * HEADING SIZES
+**/
+
+$heading-base-size: 1.15rem;
+$heading-scale-ratio: 1.2;
+$heading-line-height: 1.2;
+
+/**
+ * BREAKPOINTS
+**/
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;

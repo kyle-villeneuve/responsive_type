@@ -1,0 +1,184 @@
+@import "./helpers";
+
+/*
+ * FONT FAMILY & WEIGHTS
+ **/
+
+$fontUrl: str-replace($font, " ", "+");
+
+@import url("https://fonts.googleapis.com/css?family=#{$fontUrl}:#{$normal},#{$bold},#{$extra-bold}");
+
+html {
+  font-size: $base-text-xs;
+
+  @if (variable-exists($name: base-text-sm)) {
+    @include mq($sm) {
+      font-size: $base-text-sm;
+    }
+  }
+
+  @if (variable-exists($name: base-text-md)) {
+    @include mq($md) {
+      font-size: $base-text-md;
+    }
+  }
+
+  @if (variable-exists($name: base-text-lg)) {
+    @include mq($lg) {
+      font-size: $base-text-lg;
+    }
+  }
+
+  @if (variable-exists($name: base-text-xl)) {
+    @include mq($xl) {
+      font-size: $base-text-xl;
+    }
+  }
+}
+
+body {
+  color: $base-color;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: $body-line-height;
+  font-weight: $normal;
+  font-family: $font-stack;
+}
+
+input,
+select,
+textarea,
+code,
+button,
+p {
+  font: inherit;
+}
+
+/**
+  * PARAGRAPH TEXT & MODIFIERS
+ **/
+
+.p {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+.i,
+i {
+  font-style: italic;
+}
+
+.b,
+b {
+  font-weight: $bold;
+}
+
+.bb {
+  font-weight: $extra-bold;
+}
+
+a,
+.a {
+  color: inherit;
+  font-size: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+
+code,
+.code {
+  font-family: monospace;
+  display: block;
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+small,
+.small {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.lowercase {
+  text-transform: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * HEADINGS
+**/
+
+.h1,
+h1 {
+  font-size: $heading-base-size * pow($heading-scale-ratio, 3);
+}
+
+.h2,
+h2 {
+  font-size: $heading-base-size * pow($heading-scale-ratio, 2.5);
+}
+
+.h3,
+h3 {
+  font-size: $heading-base-size * pow($heading-scale-ratio, 2);
+}
+
+.h4,
+h4 {
+  font-size: $heading-base-size * pow($heading-scale-ratio, 1.5);
+}
+
+.h5,
+h5 {
+  font-size: $heading-base-size * pow($heading-scale-ratio, 1);
+}
+
+.h6,
+h6 {
+  font-size: $heading-base-size;
+}
+
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4,
+.h5,
+h5,
+.h6,
+h6 {
+  line-height: $heading-line-height;
+}
